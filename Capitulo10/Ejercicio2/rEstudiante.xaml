@@ -1,0 +1,39 @@
+<Window x:Class="Tarea_5PA1_JoseA.Capitulo10.Ejercicio2.rEstudiante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea_5PA1_JoseA.Capitulo10.Ejercicio2"
+        mc:Ignorable="d"
+        Title="rEstudiante" Height="650" Width="400">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,0"  VerticalAlignment="Top"> 
+        <Label Content="Estudianteid"/>
+        <TextBox x:Name = "EstudianteidTextbox" Text= "{Binding Estudianteid}" />
+
+        <Label Content="Nombre:"/>
+        <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}"/>
+
+        <Label Content="Apellido:"/>
+        <TextBox x:Name="ApellidoTextBox" Text="{Binding Apellido}"/>
+
+        <Label Content="Edad:"/>
+        <TextBox x:Name="EdadTextBox" Text="{Binding Edad}"/>
+
+        <Label Content="Curso:"/>
+        <TextBox x:Name="CursoTextBox" Text="{Binding Curso}"/>
+
+        <Label Content="Tanda:"/>
+        <TextBox x:Name="TandaTextBox" Text="{Binding Tanda}"/>
+
+        <StackPanel 
+            Margin="0,20,0,0"                      
+            Orientation="Horizontal" 
+            HorizontalAlignment="Center" >
+                <Button Content="✔ Guardar" Click="GuardarButton_Click" />
+                <Button Content="Mostrar" Click="MostrarrButton_Click"/>
+            </StackPanel>
+            <DataGrid x:Name="EstudianteDataGrid"  Height="250" Width="300"></DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
